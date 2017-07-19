@@ -31,6 +31,10 @@ object RamDatabase {
     Marks(5, 6, 50), Marks(5, 7, 90), Marks(5, 8, 70), Marks(5, 9, 74), Marks(5, 10, 60)
   )
 
+  def getStudentById(studentId :Long): Student ={
+    studentList.find(_.id == studentId).get
+
+  }
   /*
   val scoreCards : ListBuffer[ScoreCard] = new ListBuffer[ScoreCard]
 
